@@ -16,7 +16,6 @@ export function Graph() {
         photoUrl = URL.createObjectURL(photo);
         // availability = await graph.api("/beta/users/me/presence").get(); // BETA FUNCTIONALITY!
         availability = await graph.api("/me/presence").version('beta').get();
-        document.write("DANIEL: ",availability);
       } catch {
         // Could not fetch photo from user's profile, return empty string as placeholder.
       }
